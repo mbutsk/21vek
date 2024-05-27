@@ -72,6 +72,7 @@ async def startGame(callback: types.CallbackQuery):
     await callback.answer("Игра открыта")
     message = callback.message
     coins = getData(callback.from_user.id, 'coins')
+    multis = getData(callback.from_user.id, 'multis')
     match int(str(coins)[-1]) + 1:
         case 1:
             case = "ВекКоин"
@@ -80,7 +81,7 @@ async def startGame(callback: types.CallbackQuery):
         case _:
             case = "ВекКоинов"
     await message.answer_sticker("CAACAgIAAxkBAAEMK7BmTyFlf4fvwknFsEQB5yIgzHSxGwACxVIAAoHBeUrvSqVQlhMRLDUE")
-    await message.answer(f"ВекКликер\n{hbold(f'{coins} ВекКоинов')}",
+    await message.answer(f"ВекКликер\n{hbold(f'{coins} {case} Множители: {multis}')}",
                          reply_markup=await Markups.click(coins, case))
 
 @dp.callback_query(InGame(), F.data == 'click')
@@ -101,7 +102,7 @@ async def click(callback: types.CallbackQuery):
         case = "ВекКоинов"
     updateData(callback.from_user.id, 'coins', coins + multis)
     coins+=multis
-    await message.edit_text(f"ВекКликер\n{hbold(f'{coins} {case}')}",
+    await message.edit_text(f"ВекКликер\n{hbold(f'{coins} {case} Множители: {multis}')}",
                             reply_markup=await Markups.click(coins, case))
 
 @dp.callback_query(InGame(), F.data == 'shop')
