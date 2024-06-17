@@ -15,5 +15,5 @@
 - [ ] У меня было мало времени, вы чего?😢
 
 ## Авторство
-Код, картинки и все остальное: [mbutsk](https://github.com/mbutskpy)
-Другие проекты автора: [@mbutsk_bot](https://t.me/mbutsk_bot), [@mbutskh_bot](https://t.me/mbutskh_bot), [mbutsk's reminder](https://github.com/mbutskpy/mbutsks-reminder), [TgStatus](https://github.com/mbutskpy/TgStatus)
+Код, картинки и все остальное: [mbutsk](https://github.com/mbutsk)
+Другие проекты автора: [@mbutsk_bot](https://t.me/mbutsk_bot), [@mbutskh_bot](https://t.me/mbutskh_bot), [mbutsk's reminder](https://github.com/mbutsk/mbutsks-reminder), [TgStatus](https://github.com/mbutsk/TgStatus)

@@ -36,6 +36,6 @@ class Markups():
     
     async def credits():
         tg     = InlineKeyboardButton(text="Telegram создателя", url="tg://user?id=1223353442")
-        github = InlineKeyboardButton(text="GitHub создателя",   url="https://github.com/mbutskpy")
+        github = InlineKeyboardButton(text="GitHub создателя",   url="https://github.com/mbutsk")
         markup = InlineKeyboardBuilder().add(github).row(tg).as_markup()
         return markup
